@@ -4,6 +4,7 @@
   --color-primary: #0077ff;
   --color-bg: #04030d;
   --color-secondary: #d64242;
+  --color-ts: #aca9cc;
 }
 
 body {
@@ -21,4 +22,8 @@ body {
 
 .animate-blob {
   animation: blob 8s infinite ease-in-out;
+}
+
+section {
+  padding-inline: 200px;
 }
