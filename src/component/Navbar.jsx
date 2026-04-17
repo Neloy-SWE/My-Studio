@@ -16,12 +16,12 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className="w-full shadow-md fixed top-0 left-0 z-50">
+            <nav className="w-full bg-bg shadow-md fixed top-0 left-0 z-50">
                 <div className="max-w-7xl mx-auto px-4 py-3 relative flex items-center">
                     <div className="text-3xl text-primary font-bold absolute">Neloy</div>
                     <ul className="hidden md:flex mx-auto space-x-8 text-gray-700 font-medium">
                         {navItems.map((item) => (
-                            <li key={item} className="text-white hover:text-primary px-4 py-2 border border-transparent hover:border-primary cursor-pointer">
+                            <li key={item} className="text-white hover:text-secondary px-4 py-2 border border-transparent hover:border-secondary cursor-pointer">
                                 {item}
                             </li>
                         ))}
