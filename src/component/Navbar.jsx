@@ -6,12 +6,12 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     const navItems = [
-        "Home",
-        "About",
-        "Service",
-        "Skill",
-        "Experience",
-        "Project",
+        { name: "Home", id: "home" },
+        { name: "About", id: "about" },
+        { name: "Service", id: "service" },
+        { name: "Skill", id: "skill" },
+        { name: "Experience", id: "experience" },
+        { name: "Project", id: "project" },
     ];
 
     return (
@@ -20,9 +20,15 @@ const Navbar = () => {
                 <div className="max-w-7xl mx-auto px-4 py-3 relative flex items-center">
                     <div className="text-3xl text-primary font-bold absolute">Neloy</div>
                     <ul className="hidden md:flex mx-auto space-x-8 text-gray-700 font-medium">
-                        {navItems.map((item) => (
-                            <li key={item} className="text-white hover:text-secondary px-4 py-2 border border-transparent hover:border-secondary cursor-pointer">
-                                {item}
+                        {navItems.map(({ name, id }) => (
+                            <li key={id} className="text-white hover:text-secondary px-4 py-2 border border-transparent hover:border-secondary cursor-pointer"
+                                onClick={() => {
+                                    document.getElementById(id)?.scrollIntoView({
+                                        behavior: "smooth",
+                                    });
+                                }}
+                            >
+                                {name}
                             </li>
                         ))}
                     </ul>
@@ -35,15 +41,15 @@ const Navbar = () => {
                 </div>
 
                 {isOpen && (
-                    <div className="md:hidden shadow-md">
-                        <ul className="flex flex-col items-center space-y-4 py-4">
-                            {navItems.map((item) => (
+                    <div className="md:hidden shadow-md h-screen">
+                        <ul className="flex flex-col items-center justify-center space-y-4 py-4">
+                            {navItems.map(({ name, id }) => (
                                 <li
-                                    key={item}
+                                    key={id}
                                     className="text-white hover:text-primary cursor-pointer"
                                     onClick={() => setIsOpen(false)}
                                 >
-                                    {item}
+                                    {name}
                                 </li>
                             ))}
                         </ul>
