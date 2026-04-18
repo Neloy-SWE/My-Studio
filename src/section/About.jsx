@@ -27,8 +27,8 @@ const About = () => {
                     <p className="text-white text-2xl font-bold pb-[15px]">
                         Daffodil International University
                     </p>
-                    <p className="text-ts">
-                        From the department of Software Engineering
+                    <p className="text-ts mb-[5px]">
+                        BSc from the Department of Software Engineering
                     </p>
                     <p className="text-white text-sm font-bold">With CPGA 3.92</p>
                 </div>

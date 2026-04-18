@@ -18,7 +18,7 @@ const Service = () => {
         },
         {
             title: "Backend",
-            body: "High-performance cross-platform applications built with Flutter for iOS and Android.",
+            body: "Robust server-side logic and API development with Node.js, Spring boot, and ASP.NET Core.",
             child: <Database className="text-secondary" />,
             stackList: ["Node.js", "Spring Boot", "ASP.NET Core", "Oracle", "PostgreSQL", "MySQL", "MongoDB"],
         },
@@ -27,9 +27,9 @@ const Service = () => {
     return (
         <>
             <section id="service" className="min-h-screen flex flex-col justify-center">
-                <div className="flex justify-between mb-[50px] px-[100px]">
-                    <h1 className="text-white font-bold text-6xl">Core Services</h1>
-                    <p className="text-secondary w-1/4">Crafting end-to-end digital experiences useing industry-leading technologies.</p>
+                <div className="flex flex-col justify-center items-center mb-[50px]">
+                    <h1 className="text-white font-bold text-6xl mb-[20px]">Core Services</h1>
+                    <p className="text-secondary text-center">Crafting end-to-end digital experiences useing industry-leading technologies.</p>
                 </div>
 
                 <div className="grid grid-cols-1 xl:grid-cols-3 justify-between">{
