@@ -3,7 +3,7 @@
 @theme {
   --color-primary: #0077ff;
   --color-bg: #04030d;
-  --color-abg: #000436;
+  --color-abg: #171717;
   --color-secondary: #d64242;
   --color-ts: #aca9cc;
 }
@@ -38,6 +38,12 @@ section {
   }
 }
 
+@media (max-width: 650px) {
+  section {
+    padding-inline: 25px;
+  }
+}
+
 .titleText p {
   color: white;
 }
@@ -49,4 +55,5 @@ section {
 
 .titleText p:nth-child(2) {
   font-size: 20px;
+  color: #d64242;
 }

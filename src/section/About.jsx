@@ -1,7 +1,7 @@
 const About = () => {
     return (
         <>
-            <section id="about" className="w-full flex items-center justify-start mb-[100px] scroll-mt-16">
+            <section id="about" className="min-h-screen w-full flex items-center justify-start mb-[100px] scroll-mt-[0px]">
                 <div className="w-1/2 pr-[100px]">
                     <img src="../assets/work.jpg" alt="work" className="h-full w-full object-cover" />
                 </div>
@@ -30,9 +30,7 @@ const About = () => {
                     <p className="text-ts">
                         From the department of Software Engineering
                     </p>
-                    <p className="text-white text-sm">With CPGA 3.92</p>
-
-
+                    <p className="text-white text-sm font-bold">With CPGA 3.92</p>
                 </div>
 
             </section>

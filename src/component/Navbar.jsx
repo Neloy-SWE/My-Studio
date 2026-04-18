@@ -18,13 +18,13 @@ const Navbar = () => {
         <>
             <nav className="w-full bg-bg shadow-md fixed top-0 left-0 z-50">
                 <div className="max-w-7xl mx-auto px-4 py-3 relative flex items-center">
-                    <div className="text-3xl text-primary font-bold absolute cursor-pointer"
+                    <div className="text-3xl text-white font-bold absolute cursor-pointer"
                         onClick={() => {
                             document.getElementById("home")?.scrollIntoView({
                                 behavior: "smooth",
                             });
                         }}
-                    >Neloy</div>
+                    ><span className="text-primary">N</span>eloy</div>
                     <ul className="hidden md:flex mx-auto space-x-8 text-gray-700 font-medium">
                         {navItems.map(({ name, id }) => (
                             <li key={id} className="text-white hover:text-secondary px-4 py-2 border border-transparent hover:border-secondary cursor-pointer"
