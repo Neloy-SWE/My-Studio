@@ -1,4 +1,4 @@
-import { Smartphone, Laptop, Database} from "lucide-react";
+import { Smartphone, Laptop, Database } from "lucide-react";
 import ServiceCard from "../component/ServiceCard";
 
 const Service = () => {
@@ -38,8 +38,7 @@ const Service = () => {
                         body,
                         child,
                         stackList,
-                        index,
-                    }) => (
+                    }, index,) => (
                         <ServiceCard
                             key={index}
                             title={title}
