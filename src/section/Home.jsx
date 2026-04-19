@@ -1,12 +1,12 @@
-import TitleText from "../component/TitleText";
+import TitleCount from "../component/TitleCount";
 
 const Home = () => {
 
-    const titleTexts = [
-        { title: "4+", text: "Years of experience" },
-        { title: "15+", text: "Successful projects delivered" },
-        { title: "10+", text: "Happy clients" },
-        { title: "100%", text: "Success rate" },
+    const titleCounts = [
+        { count: "4+", title: "Years of experience" },
+        { count: "15+", title: "Successful projects delivered" },
+        { count: "10+", title: "Happy clients" },
+        { count: "100%", title: "Success rate" },
     ];
 
     return (
@@ -19,8 +19,8 @@ const Home = () => {
                         <p className="font-bold text-secondary text-2xl">Your software solution provider</p>
                         <p className="text-white text-xl pb-10">Mobile | Web | Backend</p>
                         <div className="flex">
-                            <button className="bg-secondary border border-secondary hover:bg-bg text-lg font-bold text-white hover:text-secondary px-4 py-2 mr-[20px]">My resume</button>
-                            <button className="border border-secondary hover:bg-secondary text-lg font-bold text-secondary hover:text-white px-4 py-2">Want to talk ?</button>
+                            <button className="bg-secondary border border-secondary hover:bg-bg text-lg font-bold text-white hover:text-secondary px-4 py-2 mr-[20px] transition duration-300">My resume</button>
+                            <button className="border border-secondary hover:bg-secondary text-lg font-bold text-secondary hover:text-white px-4 py-2 transition duration-300">Want to talk ?</button>
 
                         </div>
 
@@ -36,8 +36,8 @@ const Home = () => {
 
                 <div className="w-full py-[30px] px-[50px] md:px-[0px] grid grid-cols-2 md:grid-cols-4 gap-y-[30px] mb-[100px]">
                     {
-                        titleTexts.map(({ title, text }, index) => (
-                            <TitleText key={index} title={title} text={text} />
+                        titleCounts.map(({ count, title }, index) => (
+                            <TitleCount key={index} count={count} title={title} />
                         ))
                     }
                 </div>

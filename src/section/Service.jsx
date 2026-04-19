@@ -1,5 +1,6 @@
 import { Smartphone, Laptop, Database } from "lucide-react";
 import ServiceCard from "../component/ServiceCard";
+import TitleSection from "../component/TitleSection";
 
 const Service = () => {
 
@@ -27,10 +28,10 @@ const Service = () => {
     return (
         <>
             <section id="service" className="min-h-screen flex flex-col justify-center">
-                <div className="flex flex-col justify-center items-center mb-[50px]">
-                    <h1 className="text-white font-bold text-6xl mb-[20px]">Core Services</h1>
-                    <p className="text-secondary text-center">Crafting end-to-end digital experiences useing industry-leading technologies.</p>
-                </div>
+                <TitleSection
+                    sectionName={"Core Services"}
+                    description={"Crafting end-to-end digital experiences using industry-leading technologies."}
+                />
 
                 <div className="grid grid-cols-1 xl:grid-cols-3 justify-between">{
                     ServiceCardObjectList.map(({
