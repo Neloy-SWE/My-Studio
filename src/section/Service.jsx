@@ -1,5 +1,5 @@
 import { Smartphone, Laptop, Database } from "lucide-react";
-import ServiceCard from "../component/ServiceCard";
+import CardService from "../component/Card/CardService";
 import TitleSection from "../component/TitleSection";
 
 const Service = () => {
@@ -41,7 +41,7 @@ const Service = () => {
                         child,
                         stackList,
                     }, index,) => (
-                        <ServiceCard
+                        <CardService
                             key={index}
                             title={title}
                             body={body}
