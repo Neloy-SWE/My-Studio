@@ -1,12 +1,12 @@
-const TitleText = ({title, text}) => {
+const TitleCount = ({count, title}) => {
     return(
         <>
         <div className="flex flex-col items-center justify-center titleText">
+            <p>{count}</p>
             <p>{title}</p>
-            <p>{text}</p>
         </div>
         </>
     );
 }
 
-export default TitleText;
+export default TitleCount;
