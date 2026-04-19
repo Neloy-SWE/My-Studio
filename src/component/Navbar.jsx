@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
 
     const [isOpen, setIsOpen] = useState(false);
+    const [activeSection, setActiveSection] = useState("home");
+    const [isScrolling, setIsScrolling] = useState(false);
 
     const navItems = [
         { name: "Home", id: "home" },
@@ -13,6 +15,36 @@ const Navbar = () => {
         { name: "Experience", id: "experience" },
         { name: "Project", id: "project" },
     ];
+
+    useEffect(() => {
+        const sections = document.querySelectorAll("section");
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setActiveSection(entry.target.id);
+                    }
+                });
+            },
+            {
+                threshold: 0.5
+            }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+
+        const handleScroll = () => setIsScrolling(true);
+        const handleScrollEnd = () => setIsScrolling(false);
+
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scrollend', handleScrollEnd);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('scrollend', handleScrollEnd);
+            observer.disconnect();
+        };
+    }, []);
 
     return (
         <>
@@ -27,11 +59,20 @@ const Navbar = () => {
                     ><span className="text-primary">N</span>eloy</div>
                     <ul className="hidden md:flex mx-auto space-x-8 text-gray-700 font-medium">
                         {navItems.map(({ name, id }) => (
-                            <li key={id} className="text-white hover:text-secondary px-4 py-2 border border-transparent hover:border-secondary cursor-pointer"
+                            <li key={id} className={
+                                `
+                                ${activeSection === id && !isScrolling ?
+                                    "text-secondary px-4 py-2 border-[0.5px] border-secondary cursor-pointer" :
+                                    "text-white px-4 py-2 border-[0.5px] border-transparent hover:border-white cursor-pointer"}
+                                cursor-pointer
+                                transition duration-300
+                                `
+                            }
                                 onClick={() => {
                                     document.getElementById(id)?.scrollIntoView({
                                         behavior: "smooth",
                                     });
+                                    setActiveSection(id);
                                 }}
                             >
                                 {name}

@@ -21,15 +21,16 @@ const Service = () => {
             title: "Backend",
             body: "Robust server-side logic and API development with Node.js, Spring boot, and ASP.NET Core.",
             child: <Database className="text-secondary" />,
-            stackList: ["Node.js", "Spring Boot", "ASP.NET Core", "Oracle", "PostgreSQL", "MySQL", "MongoDB"],
+            stackList: ["Node.js", "MySQL","Oracle", "ASP.NET Core", "PostgreSQL", "Spring Boot", "MongoDB"],
         },
     ];
 
     return (
         <>
-            <section id="service" className="min-h-screen flex flex-col justify-center">
+            <section id="service" className="min-h-screen flex flex-col justify-center bg-white">
                 <TitleSection
                     sectionName={"Core Services"}
+                    color="black"
                     description={"Crafting end-to-end digital experiences using industry-leading technologies."}
                 />
 
