@@ -1,28 +1,57 @@
-import { Calendar, Laptop2 } from "lucide-react";
+import { Briefcase, Calendar } from "lucide-react";
+import Chip from "../Chip";
 
 const CardExperience = ({
     title,
     company,
     dateRange,
-    responsibility,
+    responsibilities,
+    stacks,
 }) => {
     return (
         <>
-            <div className="flex items-center justify-center gap-5 pl-8 mb-10">
-                <span className=" w-6 h-6 bg-secondary rounded-full"></span>
+            <div className="flex items-center justify-center gap-5 mb-10">
+                <span className=" w-[40px] h-[40px] bg-secondary rounded-full flex"><Briefcase className="text-white m-auto" /></span>
                 <div className="bg-abg p-5 w-3/5 rounded-[10px] border border-white/60 hover:border-primary transition duration-300">
-                    <h3 className="text-lg font-semibold">
-                        {title}
-                    </h3>
-                    <p className="text-sm text-gray-400">
-                        {company}
-                    </p>
-                    <p className="text-xs text-gray-500 mb-3">
-                        {dateRange}
-                    </p>
-                    <p className="text-gray-300 text-sm">
-                        {responsibility}
-                    </p>
+
+                    <div className="flex justify-between items-start">
+                        <div className="w-2/3">
+                            <h1 className="text-lg font-bold text-white">
+                                {title}
+                            </h1>
+                            <p className="text-sm text-secondary">
+                                {company}
+                            </p>
+
+                            <div className="my-4">
+                                {
+                                    responsibilities.map((res, index) => (
+                                        <div key={index} className="flex justify-start gap-5">
+                                            <span className=" w-[5px] h-[5px] bg-secondary rounded-full mt-2"></span>
+                                            <p className="text-white text-sm">
+                                                {res}
+                                            </p>
+                                        </div>
+                                    ))
+                                }
+                            </div>
+
+                        </div>
+
+                        <div className="flex w-1/3 text-ts justify-end">
+                            <Calendar className="h-[15px] mr-[10px]" />
+                            <p className="text-xs">
+                                {dateRange}
+                            </p>
+                        </div>
+                    </div>
+                    <div className="flex flex-wrap gap-2">{
+                        stacks.map((value, index) => (
+                            <Chip key={index} value={value} colorText="secondary" colorBG="white" />
+                        ))
+                    }</div>
+
+
                 </div>
 
             </div>

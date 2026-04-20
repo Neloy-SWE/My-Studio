@@ -1,101 +1,70 @@
-import { Laptop } from "lucide-react";
 import TitleSection from "../component/TitleSection";
 import CardExperience from "../component/Card/CardExperience";
 
-// const Experience = () => {
+const Experience = () => {
 
-//     const experienceDetails = [
-//         {
-//             title: "Software Engineer",
-//             company: "Gigatech Ltd.",
-//             dateRange: "(March, 2023 - Present)",
-//             responsibility: "Develop multiple production grade software",
-//         },
-//         {
-//             title: "Software Engineer",
-//             company: "Gigatech Ltd.",
-//             dateRange: "(March, 2023 - Present)",
-//             responsibility: "Develop multiple production grade software",
-//         },
-//         {
-//             title: "Software Engineer",
-//             company: "Gigatech Ltd.",
-//             dateRange: "(March, 2023 - Present)",
-//             responsibility: "Develop multiple production grade software",
-//         },
-//                 {
-//             title: "Software Engineer",
-//             company: "Gigatech Ltd.",
-//             dateRange: "(March, 2023 - Present)",
-//             responsibility: "Develop multiple production grade software",
-//         }
-//     ];
-
-//     return (
-//         <>
-//             <section id="experience" className="min-h-screen bg-abg flex justify-center scroll-mt-16">
-//             <div className="flex items-center">
-//                 <div className="grid grid-cols-2 gap-[20px]">
-//                     {
-//                         experienceDetails.map(
-//                             (
-//                                 {
-//                                     title,
-//                                     company,
-//                                     dateRange,
-//                                     responsibility,
-//                                 },
-//                                 index,) => (
-//                                     <CardExperience 
-//                                     key={index}
-//                                     title={title}
-//                                     company={company}
-//                                     dateRange={dateRange}
-//                                     responsibility={responsibility}
-//                                     />
-//                                 ))
-//                     }
-//                 </div>
-//             </div>
-
-//             </section>
-//         </>
-//     );
-// }
-
-// export default Experience;
-
-
-export default function Experience() {
     const experienceDetails = [
         {
             title: "Software Engineer",
-            company: "Gigatech Ltd.",
-            dateRange: "(March, 2023 - Present)",
-            responsibility: "Develop multiple production grade software",
+            company: "Giga Tech Limited",
+            dateRange: "(March, 2023-Present)",
+            responsibilities: [
+                "Delivered multi-platform apps across Android, iOS, and web",
+                "Built secure authentication and certificate-based API systems",
+                "Developed complete eKYC workflows for remote account opening",
+                "Owned core technical decisions and ensured timely feature delivery"
+            ],
+            stacks: [
+                "dart",
+                "java",
+                "kotlin",
+                "c-sharp",
+                "javascript",
+                "xml",
+                "thymeleaf",
+                "flutter",
+                "asp.net core",
+                "spring boot"
+            ],
         },
         {
-            title: "Software Engineer",
-            company: "Gigatech Ltd.",
-            dateRange: "(March, 2023 - Present)",
-            responsibility: "Develop multiple production grade software",
+            title: "Junior Software Engineer",
+            company: "Leads Corporation Limited",
+            dateRange: "(August, 2022-March, 2023)",
+            responsibilities: [
+                "Developed enterprise financial and insurance mobile applications",
+                "Implemented core features and maintained production-ready systems",
+                "Collaborated to resolve issues and improve application stability",
+                "Optimized mobile application's performance and improved load time by 30%"
+            ],
+
+            stacks: [
+                "dart",
+                "java",
+                "kotlin",
+                "xml",
+                "flutter",
+            ],
         },
         {
-            title: "Software Engineer",
-            company: "Gigatech Ltd.",
-            dateRange: "(March, 2023 - Present)",
-            responsibility: "Develop multiple production grade software",
-        },
-        {
-            title: "Software Engineer",
-            company: "Gigatech Ltd.",
-            dateRange: "(March, 2023 - Present)",
-            responsibility: "Develop multiple production grade software",
+            title: "Flutter Developer",
+            company: "Antooba Technologies LTD.",
+            dateRange: "(September, 2021-May, 2022)",
+            responsibilities: [
+                "Developed e-commerce and shop management mobile applications",
+                "Built reusable UI components for faster development cycles",
+                "Implemented features ensuring responsive and smooth user experience",
+            ],
+
+            stacks: [
+                "dart",
+                "flutter",
+            ],
         },
     ];
 
     return (
-        <section id="experience" className="min-h-screen  flex flex-col justify-center scroll-mt-16">
+        <section id="experience" className="min-h-screen  flex flex-col justify-center scroll-mt-[100px]">
 
             <TitleSection
                 sectionName={"Experience"}
@@ -110,7 +79,8 @@ export default function Experience() {
                         title,
                         company,
                         dateRange,
-                        responsibility,
+                        responsibilities,
+                        stacks,
                     },
                     index,
                 ) => (
@@ -119,9 +89,12 @@ export default function Experience() {
                         title={title}
                         company={company}
                         dateRange={dateRange}
-                        responsibility={responsibility}
+                        responsibilities={responsibilities}
+                        stacks={stacks}
                     />
                 ))}
         </section>
     );
 }
+
+export default Experience;
