@@ -1,4 +1,4 @@
-import TitleSection from "../component/TitleSection";
+import TitleSection from "../component/Title/TitleSection";
 import CardExperience from "../component/Card/CardExperience";
 
 const Experience = () => {
@@ -64,14 +64,12 @@ const Experience = () => {
     ];
 
     return (
-        <section id="experience" className="min-h-screen  flex flex-col justify-center scroll-mt-[100px]">
+        <section id="experience" className="min-h-screen flex flex-col justify-center scroll-mt-[100px]">
 
             <TitleSection
                 sectionName={"Experience"}
                 description={"Shipping code, building products, delivering value."}
             />
-
-
 
             {experienceDetails.map(
                 (

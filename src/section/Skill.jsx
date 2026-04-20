@@ -1,5 +1,5 @@
 import { useState } from "react";
-import TitleSection from "../component/TitleSection";
+import TitleSection from "../component/Title/TitleSection";
 
 const Skills = () => {
     const [activeTab, setActiveTab] = useState("programming");

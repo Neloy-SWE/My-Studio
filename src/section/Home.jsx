@@ -1,4 +1,4 @@
-import TitleCount from "../component/TitleCount";
+import TitleCount from "../component/Title/TitleCount";
 
 const Home = () => {
 

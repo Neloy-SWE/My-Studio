@@ -5,7 +5,7 @@ const Navbar = () => {
 
     const [isOpen, setIsOpen] = useState(false);
     const [activeSection, setActiveSection] = useState("home");
-    const [isScrolling, setIsScrolling] = useState(false);
+    // const [isScrolling, setIsScrolling] = useState(false);
 
     const navItems = [
         { name: "Home", id: "home" },
@@ -27,21 +27,21 @@ const Navbar = () => {
                 });
             },
             {
-                threshold: 0.3
+                threshold: 0.6
             }
         );
 
         sections.forEach((section) => observer.observe(section));
 
-        const handleScroll = () => setIsScrolling(true);
-        const handleScrollEnd = () => setIsScrolling(false);
+        // const handleScroll = () => setIsScrolling(true);
+        // const handleScrollEnd = () => setIsScrolling(false);
 
-        window.addEventListener('scroll', handleScroll);
-        window.addEventListener('scrollend', handleScrollEnd);
+        // window.addEventListener('scroll', handleScroll);
+        // window.addEventListener('scrollend', handleScrollEnd);
 
         return () => {
-            window.removeEventListener('scroll', handleScroll);
-            window.removeEventListener('scrollend', handleScrollEnd);
+            // window.removeEventListener('scroll', handleScroll);
+            // window.removeEventListener('scrollend', handleScrollEnd);
             observer.disconnect();
         };
     }, []);
@@ -61,9 +61,9 @@ const Navbar = () => {
                         {navItems.map(({ name, id }) => (
                             <li key={id} className={
                                 `
-                                ${activeSection === id && !isScrolling ?
+                                ${activeSection === id ?
                                     "text-secondary px-4 py-2 border-[0.5px] border-secondary cursor-pointer" :
-                                    "text-white px-4 py-2 border-[0.5px] border-transparent hover:border-white cursor-pointer"}
+                                    "text-ts hover:text-white px-4 py-2 border-[0.5px] border-transparent cursor-pointer"}
                                 cursor-pointer
                                 transition duration-300
                                 `
@@ -72,7 +72,7 @@ const Navbar = () => {
                                     document.getElementById(id)?.scrollIntoView({
                                         behavior: "smooth",
                                     });
-                                    setActiveSection(id);
+                                    // setActiveSection(id);
                                 }}
                             >
                                 {name}

@@ -1,6 +1,6 @@
 import { Smartphone, Laptop, Database } from "lucide-react";
 import CardService from "../component/Card/CardService";
-import TitleSection from "../component/TitleSection";
+import TitleSection from "../component/Title/TitleSection";
 
 const Service = () => {
 

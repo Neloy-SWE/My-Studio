@@ -2,6 +2,7 @@ import Navbar from "./component/Navbar";
 import About from "./section/About";
 import Experience from "./section/Experience";
 import Home from "./section/Home";
+import Project from "./section/Project";
 import Service from "./section/Service";
 import Skills from "./section/Skill";
 
@@ -14,6 +15,7 @@ const App = () => {
     <Service />
     <Skills />
     <Experience />
+    <Project />
     </>
   );
 }
