@@ -21,12 +21,20 @@ const Home = () => {
                         <p className="font-bold text-secondary text-2xl">Your software solution provider</p>
                         <p className="text-white text-xl pb-10">Mobile | Web | Backend</p>
                         <div className="flex">
-                            <button 
-                            onClick={() => openURL("https://drive.google.com/file/d/1puWgrE8gTwQNvOB8hTO5zCPzSc3af9wq/view?usp=sharing")}
-                            className="bg-secondary border border-secondary hover:bg-bg text-lg font-bold text-white hover:text-secondary px-4 py-2 mr-[20px] transition duration-300">
+                            <button
+                                onClick={() => openURL("https://drive.google.com/file/d/1puWgrE8gTwQNvOB8hTO5zCPzSc3af9wq/view?usp=sharing")}
+                                className="bg-secondary border border-secondary hover:bg-bg text-lg font-bold text-white hover:text-secondary px-4 py-2 mr-[20px] transition duration-300">
                                 My resume
-                                </button>
-                            <button className="border border-secondary hover:bg-secondary text-lg font-bold text-secondary hover:text-white px-4 py-2 transition duration-300">Want to talk ?</button>
+                            </button>
+                            <button
+                                onClick={() => {
+                                    document.getElementById("contact")?.scrollIntoView({
+                                        behavior: "smooth",
+                                    });
+                                }}
+                                className="border border-secondary hover:bg-secondary text-lg font-bold text-secondary hover:text-white px-4 py-2 transition duration-300">
+                                Want to talk ?
+                            </button>
 
                         </div>
 

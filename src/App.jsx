@@ -1,5 +1,6 @@
 import Navbar from "./component/Navbar";
 import About from "./section/About";
+import Contact from "./section/Contact";
 import Experience from "./section/Experience";
 import Home from "./section/Home";
 import Project from "./section/Project";
@@ -16,6 +17,7 @@ const App = () => {
     <Skills />
     <Experience />
     <Project />
+    <Contact />
     </>
   );
 }

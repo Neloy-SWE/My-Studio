@@ -57,3 +57,12 @@ section {
   font-size: 20px;
   color: #d64242;
 }
+
+.my-social-icon {
+  color: gray;
+  transition: color 0.3s ease;
+}
+
+.my-social-icon:hover {
+  color: #24292e; /* Custom GitHub hover color */
+}

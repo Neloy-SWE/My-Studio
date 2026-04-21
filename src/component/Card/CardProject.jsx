@@ -1,18 +1,21 @@
+import openURL from "../../utils/open_url";
+
 const CardProject = (
     {
         title,
         bannerPath,
         description,
         stackList,
+        url,
     }
 ) => {
     return (
         <>
-            <div className="group bg-bg xl:mx-4 mx-[0px] my-4 xl:my-[0px]  border-[0.5px] border-transparent hover:border-white rounded-[10px] transition duration-300">
+            <div onClick={() => openURL(url)} className="group w-[300px] bg-bg xl:mx-4 mx-[0px] my-4 xl:my-[0px]  border-[0.5px] border-transparent hover:border-white rounded-[10px] cursor-pointer transition duration-300">
                 <img src={bannerPath} alt={bannerPath} className="w-full rounded-t-[10px] object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 transition duration-500 ease-in-out" />
                 <div className="px-6 py-8">
-                    <h1 className="text-white text-bold text-[25px] mb-[25px]">{title}</h1>
-                    <p className="text-ts text-[15px] mb-[35px]">{description}</p>
+                    <h1 className="text-white text-bold text-[20px] mb-[25px]">{title}</h1>
+                    <p className="text-ts text-[14px] mb-[35px]">{description}</p>
 
                     <div className="flex flex-wrap gap-4">{
                         stackList.map((value, index) => (

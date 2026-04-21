@@ -15,6 +15,7 @@ const Project = () => {
                 "dart",
                 "bloc",
             ],
+            url: "https://github.com/Neloy-SWE/Chemical-Lab",
         },
 
         {
@@ -27,8 +28,10 @@ const Project = () => {
                 "React.js",
                 "Tailwind CSS",
                 "JavaScript",
+                "WebSocket",
                 "MongoDB"
             ],
+            url: "https://github.com/Neloy-SWE/Node.js-Learning/tree/main/project/dev_hub_frontend",
         },
 
         {
@@ -40,18 +43,19 @@ const Project = () => {
                 "dart",
                 "bloc",
             ],
+            url: "https://github.com/Neloy-SWE/Car-Route-App",
         },
     ];
 
     return (
         <>
-            <section id="project" className="min-h-screen bg-abg flex flex-col justify-center pt-16">
+            <section id="project" className="min-h-screen bg-abg flex flex-col justify-center pt-16 scroll-mt-[16px]">
 
                 <TitleSection
                     sectionName={"My Projects"}
                     description={"Thoughts into Reality"}
                 />
-                <div className="grid grid-cols-1 xl:grid-cols-3 justify-between px-[80px] mb-[30px]">{
+                <div className="grid grid-cols-1 xl:grid-cols-3 gap-y-8 xl:gap-x-6 justify-items-center max-w-6xl mx-auto">{
                     projectList.map(
                         (
                             {
@@ -59,6 +63,7 @@ const Project = () => {
                                 bannerPath,
                                 description,
                                 stackList,
+                                url,
                             },
                             index) => (
                             <CardProject
@@ -67,11 +72,12 @@ const Project = () => {
                                 bannerPath={bannerPath}
                                 description={description}
                                 stackList={stackList}
+                                url={url}
                             />
                         ))
                 }</div>
 
-                <div className="text-center">
+                <div className="text-center my-[80px]">
                     <button
                         onClick={() => openURL("https://github.com/Neloy-SWE")}
                         className="border border-secondary hover:bg-secondary text-lg font-bold text-secondary hover:text-white px-4 py-2 transition duration-300">
