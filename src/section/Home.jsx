@@ -1,4 +1,5 @@
 import TitleCount from "../component/Title/TitleCount";
+import { Images } from "../utils/images";
 
 const Home = () => {
 
@@ -27,7 +28,7 @@ const Home = () => {
                     </div>
 
                     <div className="group w-[350px] h-[400px] overflow-hidden bg-gray-200 animateBlob">
-                        <img src="../assets/profile.jpg"
+                        <img src={Images.Profile}
                             alt="profile"
                             className="w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 group-hover:scale-105 transition duration-500 ease-in-out"
                         />

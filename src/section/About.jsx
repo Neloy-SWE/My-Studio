@@ -1,9 +1,11 @@
+import { Images } from "../utils/images";
+
 const About = () => {
     return (
         <>
             <section id="about" className="min-h-screen w-full flex items-center justify-start mb-[100px] scroll-mt-[0px]">
                 <div className="w-1/2 pr-[100px]">
-                    <img src="../assets/work.jpg" alt="work" className="h-full w-full object-cover" />
+                    <img src={Images.Work} alt="work" className="h-full w-full object-cover" />
                 </div>
 
                 <div className="w-1/2">

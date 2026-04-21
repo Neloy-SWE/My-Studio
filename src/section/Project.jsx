@@ -1,5 +1,6 @@
 import CardProject from "../component/Card/CardProject";
 import TitleSection from "../component/Title/TitleSection";
+import { Images } from "../utils/images";
 
 const Project = () => {
 
@@ -7,7 +8,7 @@ const Project = () => {
         {
             title: "Chemical Lab",
             description: "Ditch the paper binders. This app puts critical Safety Data Sheets (SDS) and GHS labels right on your phone. Instantly search and access hazard info 24/7—even offline. Keep your team safe and your workplace compliant with one simple tool.",
-            bannerPath: "/chemicalLab.png",
+            bannerPath: Images.ChemicalLab,
             stackList: [
                 "flutter",
                 "dart",
@@ -18,7 +19,7 @@ const Project = () => {
         {
             title: "DevHub",
             description: "Connect, chat, and hang out with your favorite developers anytime, anywhere. With 24/7 availability and live chat, you can dive into technical discussions, collaborate on projects, or just talk shop with a global community of experts in real-time.",
-            bannerPath: "/devHub.png",
+            bannerPath: Images.DevHub,
             stackList: [
                 "Node.js",
                 "Express.js",
@@ -32,7 +33,7 @@ const Project = () => {
         {
             title: "Car Route App",
             description: "Navigate with confidence using the app, the ultimate tool for finding the safest and shortest paths from point A to point B. Designed for drivers who value both efficiency and peace of mind, our app combines advanced routing algorithms with a user-friendly interface to make every journey effortless.",
-            bannerPath: "/carRouteApp.png",
+            bannerPath: Images.CarRouteApp,
             stackList: [
                 "flutter",
                 "dart",
