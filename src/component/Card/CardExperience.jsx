@@ -45,9 +45,10 @@ const CardExperience = ({
                             </p>
                         </div>
                     </div>
-                    <div className="flex flex-wrap gap-2">{
+                    <div className="flex flex-wrap gap-4">{
                         stacks.map((value, index) => (
-                            <Chip key={index} value={value} colorText="secondary" colorBG="white" />
+                            // <Chip key={index} value={value} colorText="secondary" colorBG="white" />
+                            <h3 key={index} className="text-lime-500 text-[12px] font-bold">{value}</h3>
                         ))
                     }</div>
 

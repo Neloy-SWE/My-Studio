@@ -1,6 +1,7 @@
 import CardProject from "../component/Card/CardProject";
 import TitleSection from "../component/Title/TitleSection";
 import { Images } from "../utils/images";
+import openURL from "../utils/open_url";
 
 const Project = () => {
 
@@ -70,7 +71,13 @@ const Project = () => {
                         ))
                 }</div>
 
-                <div className="text-center"><button className="border border-secondary hover:bg-secondary text-lg font-bold text-secondary hover:text-white px-4 py-2 transition duration-300">Explore More</button></div>
+                <div className="text-center">
+                    <button
+                        onClick={() => openURL("https://github.com/Neloy-SWE")}
+                        className="border border-secondary hover:bg-secondary text-lg font-bold text-secondary hover:text-white px-4 py-2 transition duration-300">
+                        Explore More
+                    </button>
+                </div>
 
             </section>
         </>
