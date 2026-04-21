@@ -24,7 +24,7 @@ const Home = () => {
                             <button
                                 onClick={() => openURL("https://drive.google.com/file/d/1puWgrE8gTwQNvOB8hTO5zCPzSc3af9wq/view?usp=sharing")}
                                 className="bg-secondary border border-secondary hover:bg-bg text-lg font-bold text-white hover:text-secondary px-4 py-2 mr-[20px] transition duration-300">
-                                My resume
+                                My Resume
                             </button>
                             <button
                                 onClick={() => {
@@ -33,7 +33,7 @@ const Home = () => {
                                     });
                                 }}
                                 className="border border-secondary hover:bg-secondary text-lg font-bold text-secondary hover:text-white px-4 py-2 transition duration-300">
-                                Want to talk ?
+                                Want To Talk ?
                             </button>
 
                         </div>

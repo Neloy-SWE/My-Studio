@@ -21,7 +21,7 @@ const Service = () => {
             title: "Backend",
             body: "Robust server-side logic and API development with Node.js, Spring boot, and ASP.NET Core.",
             child: <Database className="text-secondary" />,
-            stackList: ["Node.js", "MySQL","Oracle", "ASP.NET Core", "PostgreSQL", "Spring Boot", "MongoDB"],
+            stackList: ["Node.js", "MySQL", "Oracle", "ASP.NET Core", "PostgreSQL", "Spring Boot", "MongoDB"],
         },
     ];
 
@@ -50,6 +50,18 @@ const Service = () => {
                         />
                     ))
                 }</div>
+
+                <div className="text-center mt-[80px]">
+                    <button
+                        onClick={() => {
+                            document.getElementById("contact")?.scrollIntoView({
+                                behavior: "smooth",
+                            });
+                        }}
+                        className="border border-secondary hover:bg-secondary text-lg font-bold text-secondary hover:text-white px-4 py-2 transition duration-300">
+                        Order Now
+                    </button>
+                </div>
 
             </section>
         </>
