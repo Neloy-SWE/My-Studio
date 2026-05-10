@@ -17,18 +17,21 @@ const Contact = () => {
                         <div className="flex gap-6 mb-[20px]">
                             <SocialIcon
                                 url="https://www.linkedin.com/in/taufiq-ahommed-neloy/"
+                                target="_blank"
                                 fgColor="currentColor"
                                 bgColor="none"
                                 className="text-white hover:text-primary transition-colors"
                             />
                             <SocialIcon
                                 url="https://wa.me/01634392437"
+                                target="_blank"
                                 fgColor="currentColor"
                                 bgColor="none"
                                 className="text-white hover:text-green-500 transition-colors"
                             />
                             <SocialIcon
                                 url="https://github.com/Neloy-SWE"
+                                target="_blank"
                                 fgColor="currentColor"
                                 bgColor="none"
                                 className="text-white hover:text-secondary transition-colors"
