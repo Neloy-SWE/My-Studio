@@ -1,10 +1,10 @@
-const TitleCount = ({count, title}) => {
-    return(
+const TitleCount = ({ count, title }) => {
+    return (
         <>
-        <div className="flex flex-col items-center justify-center titleText">
-            <p>{count}</p>
-            <p>{title}</p>
-        </div>
+            <div className="flex flex-col items-center justify-start titleText">
+                <p>{count}</p>
+                <p>{title}</p>
+            </div>
         </>
     );
 }
