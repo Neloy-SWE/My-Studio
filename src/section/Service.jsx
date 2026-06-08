@@ -27,7 +27,7 @@ const Service = () => {
 
     return (
         <>
-            <section id="service" className="min-h-screen flex flex-col justify-center bg-white py-[60px] lg:py-[0px]">
+            <section id="service" className="min-h-screen flex flex-col justify-center bg-white py-[60px] lg:py-[0px] scroll-mt-[20px]">
                 <TitleSection
                     sectionName={"Core Services"}
                     color="black"
