@@ -27,7 +27,7 @@ const Service = () => {
 
     return (
         <>
-            <section id="service" className="min-h-screen flex flex-col justify-center bg-white">
+            <section id="service" className="min-h-screen flex flex-col justify-center bg-white py-[60px] lg:py-[0px] scroll-mt-[20px]">
                 <TitleSection
                     sectionName={"Core Services"}
                     color="black"
@@ -58,7 +58,7 @@ const Service = () => {
                                 behavior: "smooth",
                             });
                         }}
-                        className="border border-secondary hover:bg-secondary text-lg font-bold text-secondary hover:text-white px-4 py-2 transition duration-300">
+                        className="border border-secondary hover:bg-secondary text-[14px] lg:text-lg font-bold text-secondary hover:text-white px-4 py-2 transition duration-300">
                         Order Now
                     </button>
                 </div>
