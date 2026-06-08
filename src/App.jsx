@@ -1,4 +1,5 @@
 import Navbar from "./component/Navbar";
+import ScrollToTop from "./component/ScrollToTop";
 import About from "./section/About";
 import Contact from "./section/Contact";
 import Experience from "./section/Experience";
@@ -8,16 +9,17 @@ import Service from "./section/Service";
 import Skills from "./section/Skill";
 
 const App = () => {
-  return(
+  return (
     <>
-    <Navbar />
-    <Home />
-    <About />
-    <Service />
-    <Skills />
-    <Experience />
-    <Project />
-    <Contact />
+      <Navbar />
+      <Home />
+      <About />
+      <Service />
+      <Skills />
+      <Experience />
+      <Project />
+      <Contact />
+      <ScrollToTop />
     </>
   );
 }
