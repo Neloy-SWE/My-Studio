@@ -64,7 +64,7 @@ const Experience = () => {
     ];
 
     return (
-        <section id="experience" className="min-h-screen flex flex-col justify-center scroll-mt-[100px]">
+        <section id="experience" className="min-h-screen flex flex-col justify-center scroll-mt-[60px] lg:scroll-mt-[100px]">
 
             <TitleSection
                 sectionName={"Experience"}

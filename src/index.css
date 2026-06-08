@@ -3,7 +3,7 @@
 @theme {
   --color-primary: #0077ff;
   --color-bg: #04030d;
-  --color-abg: #171717;
+  --color-abg: #030014;
   --color-secondary: #d64242;
   --color-ts: #aca9cc;
 }
@@ -40,7 +40,7 @@ section {
 
 @media (max-width: 1024px) {
   section {
-    padding-inline: 25px;
+    padding-inline: 35px;
   }
 }
 

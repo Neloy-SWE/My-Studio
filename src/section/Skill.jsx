@@ -63,7 +63,7 @@ const Skills = () => {
     ];
 
     return (
-        <section id="skill" className="min-h-screen pt-16 px-4 scroll-mt-[60px]">
+        <section id="skill" className="min-h-screen pt-16 px-4 lg:scroll-mt-[60px]">
             <div>
                 <TitleSection
                     sectionName={"My Skills"}
@@ -75,7 +75,7 @@ const Skills = () => {
                         <button
                             key={tab.key}
                             onClick={() => setActiveTab(tab.key)}
-                            className={`px-4 py-2 border transition duration-300
+                            className={`px-4 py-2 border transition duration-300 text text-[14px] lg:text-lg
                                 ${activeTab === tab.key
                                     ? "bg-secondary text-white border-secondary"
                                     : "bg-bg text-white hover:border-secondary hover:text-secondary"
@@ -88,11 +88,11 @@ const Skills = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {skillData[activeTab].map((skill, index) => (
-                        <div key={index}>
+                        <div key={index} className=" border border-white/60 hover:border-secondary transition duration-300 rounded-lg overflow-hidden">
                             <div className="px-[30px] py-[20px] bg-abg">
                                 <div className="flex justify-between mb-[5px]">
-                                    <span className="text-white text-[20px]">{skill.name}</span>
-                                    <span className="font-bold text-white text-[15px] bg-secondary px-[15px] py-[10px] rounded-[10px]">{skill.level}%</span>
+                                    <span className="text-white text-[16px] lg:text-[20px]">{skill.name}</span>
+                                    <span className="font-bold text-white text-[12px] lg:text-[15px] bg-secondary px-[15px] py-[10px] rounded-[10px]">{skill.level}%</span>
                                 </div>
                             </div>
                             <div className="w-full bg-white overflow-hidden">
