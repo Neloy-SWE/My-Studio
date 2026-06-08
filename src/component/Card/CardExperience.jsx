@@ -14,7 +14,7 @@ const CardExperience = ({
                 <span className="hidden lg:flex w-[40px] h-[40px] bg-secondary rounded-full">
                     <Briefcase className="text-white m-auto" />
                 </span>
-                <div className="bg-abg p-5 lg:w-3/5 rounded-[10px] border border-white/60 hover:border-primary transition duration-300">
+                <div className="bg-abg p-5 w-full lg:w-3/5 rounded-[10px] border border-white/60 hover:border-primary transition duration-300">
 
                     <div className="flex flex-col lg:flex-row justify-between items-start">
                         <div className="lg:w-2/3">
