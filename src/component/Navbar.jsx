@@ -58,7 +58,7 @@ const Navbar = () => {
                             });
                         }}
                     ><span className="text-primary">N</span>eloy</div>
-                    <ul className="hidden md:flex mx-auto space-x-8 text-gray-700 font-medium">
+                    <ul className="hidden lg:flex mx-auto space-x-8 text-gray-700 font-medium">
                         {navItems.map(({ name, id }) => (
                             <li key={id} className={
                                 `
@@ -81,7 +81,7 @@ const Navbar = () => {
                         ))}
                     </ul>
 
-                    <div className="ml-auto md:hidden">
+                    <div className="ml-auto lg:hidden">
                         <button onClick={() => setIsOpen(!isOpen)}>
                             {isOpen ? <X size={28} className="text-primary" /> : <Menu size={28} className="text-primary" />}
                         </button>
@@ -89,7 +89,7 @@ const Navbar = () => {
                 </div>
 
                 {isOpen && (
-                    <div className="md:hidden shadow-md h-screen">
+                    <div className="lg:hidden shadow-md h-screen">
                         <ul className="flex flex-col items-center justify-center space-y-4 py-4">
                             {navItems.map(({ name, id }) => (
                                 <li

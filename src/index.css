@@ -38,7 +38,7 @@ section {
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 1024px) {
   section {
     padding-inline: 25px;
   }
@@ -58,11 +58,14 @@ section {
   color: #d64242;
 }
 
-.my-social-icon {
-  color: gray;
-  transition: color 0.3s ease;
-}
+@media (max-width: 1024px) {
+  .titleText p:nth-child(1) {
+    font-size: 20px;
+  }
 
-.my-social-icon:hover {
-  color: #24292e; /* Custom GitHub hover color */
+  .titleText p:nth-child(2) {
+    font-size: 14px;
+    width: 150px;
+    text-align: center;
+  }
 }

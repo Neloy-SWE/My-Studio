@@ -14,16 +14,22 @@ const Home = () => {
     return (
         <>
             <section id="home" className="min-h-screen pt-16 w-full scroll-mt-16">
-                <div className="flex items-center justify-between mt-[100px] mb-[100px]">
-                    <div>
-                        <p className="text-secondary text-sm pb-2">Hi. Welcome to my studio. I'm</p>
-                        <h1 className="font-bold text-white  text-6xl pb-8">TAUFIQ AHOMMED NELOY</h1>
-                        <p className="font-bold text-secondary text-2xl">Your software solution provider</p>
+
+                {/* introduction */}
+                <div className="flex flex-col-reverse lg:flex-row items-center justify-between mt-[100px] mb-[100px]">
+
+                    {/* name & title */}
+                    <div className="flex flex-col items-center lg:items-start text-center lg:text-left py-[50px]">
+                        <p className="text-secondary text-[16px] lg:text-sm pb-2">Hi. Welcome to my studio. I'm</p>
+                        <h1 className="font-bold text-white text-[25px] lg:text-6xl pb-8">TAUFIQ AHOMMED NELOY</h1>
+                        <p className="font-bold text-secondary text-[22px] lg:text-2xl pb-1">Your software solution provider</p>
                         <p className="text-white text-xl pb-10">Mobile | Web | Backend</p>
+
+                        {/* resume & contact buttons */}
                         <div className="flex">
                             <button
                                 onClick={() => openURL("https://drive.google.com/file/d/1puWgrE8gTwQNvOB8hTO5zCPzSc3af9wq/view?usp=sharing")}
-                                className="bg-secondary border border-secondary hover:bg-bg text-lg font-bold text-white hover:text-secondary px-4 py-2 mr-[20px] transition duration-300">
+                                className="bg-secondary border border-secondary hover:bg-bg text-[14px] lg:text-lg font-bold text-white hover:text-secondary px-4 py-2 mr-[20px] transition duration-300">
                                 My Resume
                             </button>
                             <button
@@ -32,7 +38,7 @@ const Home = () => {
                                         behavior: "smooth",
                                     });
                                 }}
-                                className="border border-secondary hover:bg-secondary text-lg font-bold text-secondary hover:text-white px-4 py-2 transition duration-300">
+                                className="border border-secondary hover:bg-secondary text-[14px] lg:text-lg font-bold text-secondary hover:text-white px-4 py-2 transition duration-300">
                                 Want To Talk ?
                             </button>
 
@@ -40,6 +46,7 @@ const Home = () => {
 
                     </div>
 
+                    {/* profile image */}
                     <div className="group w-[350px] h-[400px] overflow-hidden bg-gray-200 animateBlob">
                         <img src={Images.Profile}
                             alt="profile"
@@ -48,7 +55,8 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className="w-full py-[30px] px-[50px] md:px-[0px] grid grid-cols-2 md:grid-cols-4 gap-y-[30px] mb-[100px]">
+                {/* title counts */}
+                <div className="w-full py-[30px] px-[25px] lg:px-[0px] grid grid-cols-2 md:grid-cols-4 gap-y-[30px] gap-x-[20px] lg:gap-x-[0px] mb-[100px]">
                     {
                         titleCounts.map(({ count, title }, index) => (
                             <TitleCount key={index} count={count} title={title} />
