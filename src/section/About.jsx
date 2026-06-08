@@ -3,7 +3,7 @@ import { Images } from "../utils/images";
 const About = () => {
     return (
         <>
-            <section id="about" className="min-h-screen w-full flex flex-col lg:flex-row items-center justify-start mb-[100px] scroll-mt-[0px]">
+            <section id="about" className="min-h-screen w-full flex flex-col lg:flex-row items-center justify-start mb-[50px] lg:mb-[100px] scroll-mt-[100px] lg:scroll-mt-[0px]">
                 <div className="lg:w-1/2 lg:pr-[100px] mb-[50px] lg:mb-0">
                     <img src={Images.Work} alt="work" className="h-full w-full object-cover" />
                 </div>
